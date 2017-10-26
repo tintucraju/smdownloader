@@ -41,8 +41,9 @@ $fetch_data = str_replace('">  Download Video','',explode("</a>",explode('<a cla
 $final_url = explode('"',$fetch_data)[0];
 $log = file_get_contents("log.txt");
 $log .="\n" . date("d-M-Y") . " - from url " . $smule_url;
-file_put_contents("log.txt", $log);
- echo "<a href='$final_url'>Download</a>";
+//file_put_contents("log.txt", $log);
+echo $final_url; 
+//echo "<a href='$final_url'>Download</a>";
   die;
 
 
