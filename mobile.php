@@ -46,10 +46,7 @@ if(isset($_GET['smule_url'])) {
 
 
 ?>
-<form method='get' action ="mobile.php">
-<input type ="text" name="smule_url" >
-<input type="submit" value="search" >
-</form>
+
 
 
 
@@ -70,12 +67,13 @@ if(isset($_GET['smule_url'])) {
 
 <div class='main'>
 
+<form method='get' action ="mobile.php">
 <div class='header'>
 	<h3 class='appTitle'>Smule Downloader</h3>
 	<h3 class='urlText'>
 	Url
 	</h3>
-	 <input type='text' class='downloadInput'><button class='go'>Go</button>
+	 <input type='text' name='smule_url' class='downloadInput'><button type='submit' class='go'>Go</button>
 </div>
 
 <div class='resultSection'>
@@ -83,7 +81,7 @@ if(isset($_GET['smule_url'])) {
 		echo $result_html;
 	?>
 </div>
-
+</form>
 
 
 </div>
