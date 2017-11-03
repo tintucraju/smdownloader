@@ -45,7 +45,6 @@ if(isset($_GET['smule_url'])) {
 ?>
 
 
-<meta name="referrer" content="no-referrer" />
 
 
 
@@ -53,8 +52,8 @@ if(isset($_GET['smule_url'])) {
 		if($result_html!=''){
 	?>
 	<script>
-        //location.href='https://hidereferrer.com/?<?php echo $final_url;?>'
-		window.open('<?php echo $final_url;?>');
+        location.href='https://hidereferrer.com/?<?php echo $final_url;?>'
+		//window.open('<?php echo $final_url;?>');
     </script> 
     <?php 
             //echo $final_url;    
