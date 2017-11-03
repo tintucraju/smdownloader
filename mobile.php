@@ -41,10 +41,7 @@ if(isset($_GET['smule_url'])) {
 	$log .="\n" . date("d-M-Y") . " - from url " . $smule_url;
 	$result_html = "<a target='_blank' href='$final_url'>Download</a>";
  } 
-
-
-
-
+ //$result_html  = "<a target='_blank' href='test'>Download</a>";
 ?>
 
 
@@ -78,8 +75,13 @@ if(isset($_GET['smule_url'])) {
 
 <div class='resultSection'>
 	<?php 
-		echo $result_html;
+		if($result_html!=''){
 	?>
+	<iframe id='resultFrame' src='<?php echo $final_url;?>'></iframe>
+	<?php 
+		}
+	?>
+	
 </div>
 </form>
 
@@ -87,6 +89,11 @@ if(isset($_GET['smule_url'])) {
 </div>
 
 <style>
+iframe#resultFrame {
+    border: none;
+    width: 100%;
+    height: 50vh;
+}
 .resultSection{
 	width: 100%;
 }
